@@ -1,0 +1,44 @@
+{
+  "name": "@food-presto/common",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "src/index.ts",
+  "workspaces": {
+    "nohoist": [
+      "mongodb"
+    ]
+  },
+  "scripts": {
+    "build": "yarn tsc",
+    "chk": "yarn lint && yarn type",
+    "lint": "eslint --fix src --ext .ts,.json && node -e \"console.log('Common lint success')\"",
+    "test": "yarn ../.. exec vitest run --coverage -c packages/common/vitest.root.config.ts",
+    "type": "yarn ../.. exec tsc -p packages/common/tsconfig.json --noEmit --skipLibCheck && node -e \"console.log('Common type success')\""
+  },
+  "dependencies": {
+    "dayjs": "1.11.5",
+    "lodash": "4.17.21",
+    "zod": "3.13.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.14.179",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
+    "@vitest/coverage-c8": "0.25.8",
+    "eslint": "8.11.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-json-format": "2.0.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-unused-imports": "2.0.0",
+    "eslint-plugin-vitest": "0.0.20",
+    "eslint-plugin-vitest-globals": "1.2.0",
+    "prettier": "2.5.1",
+    "rimraf": "3.0.2",
+    "typescript": "4.6.2",
+    "vitest": "0.25.8",
+    "vitest-mock-extended": "1.0.7"
+  }
+}

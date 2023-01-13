@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "outDir": "dist/functions",
+    "sourceMap": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "lib": [
+      "es2021",
+      "dom"
+    ],
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "stripInternal": true,
+    "target": "es2021",
+    "types": [
+      "node",
+      "vitest/globals"
+    ],
+  },
+  "include": [
+    "src/**/*",
+    "deploy-scripts/**/*",
+    "types.d.ts",
+    "rollup.config.ts"
+  ],
+  "exclude": [
+    "**/node_modules/**"
+  ],
+
+}

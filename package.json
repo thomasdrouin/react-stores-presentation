@@ -1,0 +1,17 @@
+{
+  "name": "food-presto",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "chk": "yarn common chk && yarn fe chk && yarn be chk && yarn db chk",
+    "test": "yarn common test && yarn fe test && yarn be test && yarn db test",
+    "fe": "yarn workspace @food-presto/fe",
+    "be": "yarn workspace @food-presto/be",
+    "common": "yarn workspace @food-presto/common"
+  },
+  "packageManager": "yarn@3.3.0"
+}

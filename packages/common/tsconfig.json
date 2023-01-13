@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "module": "CommonJS",
+    "target": "ES6",
+    "rootDir": ".",
+    "baseUrl": "./",
+    "lib": [
+      "ES6",
+      "dom"
+    ],
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "types": [
+      "node",
+      "vitest/globals"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": ["**/node_modules/**"],
+}
